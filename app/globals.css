@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swiper CSS */
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('../public/font/montserrat.ttf') format('truetype');
+  /* font-weight: 700px; */
+  font-style: normal;
+}
+/* @font-face {
+  font-family: 'NeueMontreal';
+  src: url('../public/font/NeueMontreal.otf') format('truetype');
+  font-weight: 700px;
+  font-style: normal;
+}*/
+
+*{
+  font-family: 'montserrat';
+} 
+
+
+@layer base {
+  :root {
+    --color-primary: #457dff;         
+    --color-primary-hover: #457dffbd; 
+
+    --color-blog-primary: #1734AB;
+
+    --color-dash-menu-light: #457dff2e; 
+    --color-rating: #42A2A2; 
+    --color-rating-light: #c3e9eb; 
+
+    --color-pr-name: #000000;  
+    --color-pr-eng-name: #676767;  
+    --color-pr-buy3-bg: #27AC53;  
+    --color-pr-combo-bg: #0000004D;  
+    --color-pr-combo-text: #FFED75;  
+    --color-pr-section-bg: #F6F8F8;  
+    
+    --color-gray-text: #636363;   
+    --color-hr: #EBEBEB;   
+    --color-cod-text: #242424;   
+    --color-cod-bg: #BEBFC6;   
+
+    --color-footer-btn: #32C162;   
+    --color-footer-light: #2F3441;   
+    --color-footer-btn_hover: #5eff93; 
+
+
+    --color-marquee-bg: #FFBE3C; 
+    --color-marquee-border: #F9B937; 
+    --color-marquee-bg-light: #FFBB32; 
+    
+    
+
+    --color-secondary: #aaaaaa;       
+    --color-secondary-hover: #bbbbbb; 
+
+    --color-border: #EBEBEB;          
+    --color-offer-text: #25AB20;      
+    --color-best-seller: #FFED75;     
+
+    --color-footer-bg: #252A37;      
+    --color-link-text: #222222;       
+
+    --color-free-delivery-text: #007F22; 
+    --color-free-delivery-bg: #D1F5DB;   
+
+    --color-coupon: #EFF3FF;          
+    --color-coupon-text: #457DFF;    
+    --color-error: #ff3333;         
+    --color-error-hover: #c70000b2;         
+    --color-success: #00cc00;   
+  }
+}
+
+
+
+
+/* Custom CSS for animations and specific styles */
+@layer utilities {
+  .text-stroke-black {
+    -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+  }
+  .text-fill-transparent {
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+}
+
+@keyframes glassy-flash {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-glassy-flash {
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: glassy-flash 2s linear infinite;
+}
+
+/* Custom Swiper Pagination Dots */
+.swiper-pagination-bullet {
+  background: gray !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: green !important;
+}
+
+/* .desktopnav{
+  display:block !important;
+}
+.mobilenav{
+  display:hidden !important;
+}
+
+@media only screen and (min-width: 980px) {
+
+  .desktopnav{
+    display:hidden !important;
+    }
+
+  .mobilenav{
+      display:block !important;
+  }
+
+} */
