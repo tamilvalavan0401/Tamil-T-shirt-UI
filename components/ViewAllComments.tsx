@@ -159,7 +159,7 @@ export default function ViewAllComments({ product, onSubmitRating }: RatingBoxPr
                         </div>
 
                         <div className="border-b border-border_bg p-6">
-                            <div className="text-[#292D35]">
+                            <div className="text-category_name">
                                 <div className='flex gap-x-1'>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"

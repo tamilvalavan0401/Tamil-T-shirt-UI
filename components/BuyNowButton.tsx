@@ -60,7 +60,7 @@ export default function BuyNowButton({ product }: BuyNowButtonProps) {
 
   return (
     <Button
-      className="flex-1 py-[22px] w-full bg-primary border-2 border-[#457DFF] text-white hover:bg-[#6996ff] hover:text-white text-[16px]"
+      className="flex-1 py-[22px] w-full bg-primary border-2 border-primary text-white hover:bg-primary_hover hover:text-white text-[16px]"
       onClick={handleBuyNow}
       disabled={isLoading}
     >

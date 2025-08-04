@@ -69,7 +69,7 @@ export function MediaCarousel({ media, interval = 3000 }: MediaCarouselProps) {
             key={index}
             className={`transition-all duration-300 ${
               index === currentIndex
-                ? "h-1.5 w-4 bg-[#457dff] rounded-full"
+                ? "h-1.5 w-4 bg-primary rounded-full"
                 : "h-1.5 w-1.5 rounded-full bg-white opacity-50"
             }`}
             onClick={() => setCurrentIndex(index)}

@@ -283,7 +283,7 @@ export default function CheckoutPage() {
                         <span>To Be Paid Now</span>
                         <span>₹{toBePaidNow.toFixed(2)}</span>
                       </div>
-                      <div className="flex justify-between text-red-600 font-medium">
+                      <div className="flex justify-between text-error font-medium">
                         <span>COD Due Amount (Payable on delivery)</span>
                         <span>₹{codDueAmount.toFixed(2)}</span>
                       </div>
@@ -314,7 +314,7 @@ export default function CheckoutPage() {
               <span>Total Amount</span>
               <span>₹{finalTotal.toFixed(2)}</span>
             </div>
-            <Button size="lg" className="w-full rounded-[8px] mt-[20px] text-white bg-[#457dff]"                                                                                         >
+            <Button size="lg" className="w-full rounded-[8px] mt-[20px] text-white bg-primary"                                                                                         >
               Pay ₹{finalTotal.toFixed(2)}
             </Button>
           </div>

@@ -24,7 +24,10 @@ export default function HomePage() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch("/products.json");
+        // const response = await fetch("/products.json");
+        const response = await fetch(
+      "https://assetsvilva.blr1.cdn.digitaloceanspaces.com/ecomsaas/redisapi/hq2Tam171123/products.json"
+    );
         const data = await response.json();
 
         if (Array.isArray(data)) {
@@ -43,7 +46,7 @@ export default function HomePage() {
 
   // Categorize products
   const styleComboProducts = products.filter(product => 
-    product.category_name === "Round Neck Half Sleeve Tshirts"
+    product.category_name === "Printed Couple T-Shirts"
   );
   const coupleTeesProducts = products.filter(product => 
     product.category_name === "Round Neck Half Sleeve Tshirts" && 

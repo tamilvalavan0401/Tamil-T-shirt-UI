@@ -44,7 +44,7 @@ export default function ImageGallerySwiper({ imageUrls, alt }: ImageGallerySwipe
               className="cursor-pointer"
               onClick={() => handleThumbClick(index)}
             >
-              <div className={`relative w-full aspect-square rounded-[6px] border-4 ${activeIndex === index ? "border-blue-500" : "border-transparent"}`}>
+              <div className={`relative w-full aspect-square rounded-[6px] border-4 ${activeIndex === index ? "border-primary" : "border-transparent"}`}>
                 <Image
                   src={url || "/placeholder.svg"}
                   alt={`${alt} - Thumbnail ${index + 1}`}
@@ -88,7 +88,7 @@ export default function ImageGallerySwiper({ imageUrls, alt }: ImageGallerySwipe
       </div>
 
       {/* Mobile Thumbnails */}
-      <div className="block md:hidden mt-4 w-full">
+      <div className="block md:hidden w-full">
         <Swiper
           spaceBetween={10}
           slidesPerView={3}
@@ -98,10 +98,10 @@ export default function ImageGallerySwiper({ imageUrls, alt }: ImageGallerySwipe
           {imageUrls.map((url, index) => (
             <SwiperSlide
               key={index}
-              className="cursor-pointer"
+              className="cursor-pointer "
               onClick={() => handleThumbClick(index)}
             >
-              <div className={`relative w-full aspect-square rounded-[6px] border-4 ${mobileactiveIndex === index ? "border-blue-500" : "border-transparent"}`}>
+              <div className={`relative w-full aspect-square rounded-[6px] border-4 ${mobileactiveIndex === index ? "border-primary" : "border-transparent"}`}>
                 <Image
                   src={url || "/placeholder.svg"}
                   alt={`${alt} - Thumbnail ${index + 1}`}

@@ -1,4 +1,3 @@
-// app/products/[productName]/page.tsx
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Head from "next/head";
@@ -80,10 +79,10 @@ const res = await fetch(
   }
 }
 
-export default async function ProductDetailsPage(props: { params: Promise<{ productName: string }> }) {
+export default async function ProductDetailsPage(props: { params: Promise<{ slug: string }> }) {
   // Fix: await params before using
-  const { productName } = await props.params;
-  const decodedProductName = decodeURIComponent(productName).toLowerCase().trim();
+  const { slug } = await props.params;
+  const decodedProductName = decodeURIComponent(slug).toLowerCase().trim();
   console.log("URL parameter (decoded):", decodedProductName);
 
   const allProducts: Product[] = await getProductData();
@@ -135,7 +134,7 @@ export default async function ProductDetailsPage(props: { params: Promise<{ prod
               <ul className="list-disc mt-2">
                 {closeMatches.map((url) => (
                   <li key={url}>
-                    <Link href={`/products/${encodeURIComponent(url)}`} className="text-blue-500 underline">
+                    <Link href={`/products/${encodeURIComponent(url)}`} className="text-primary underline">
                       {url}
                     </Link>
                   </li>
@@ -192,7 +191,7 @@ export default async function ProductDetailsPage(props: { params: Promise<{ prod
                 <div className="space-x-[6px]">
                   <span className="text-[24px] font-bold text-black">₹{sellingPrice}</span>
                   <span className="text-[16px] text-[#737E93] line-through">₹{product.mrp}</span>
-                  <span className="text-[16px] font-medium text-[#008C2D]">{product.discount}OFF</span>
+                  <span className="text-[16px] font-medium text-offer_text">{product.discount}OFF</span>
                 </div>
                 <p className="text-[#737E93] text-[12px]">Inclusive of all taxes</p>
               </div>
@@ -211,7 +210,7 @@ export default async function ProductDetailsPage(props: { params: Promise<{ prod
                 >
                   <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
                 </svg>
-                <p className="text-[#676767] text-[16px]">{Number(product.star_rating).toFixed(1)}</p>
+                <p className="text-gray_text text-[16px]">{Number(product.star_rating).toFixed(1)}</p>
                 <p className="text-[#494949] text-[16px] sm:block hidden">|</p>
                 <p className="text-[#207BB4] text-[16px] sm:block hidden">Reviews</p>
               </div>
@@ -277,7 +276,7 @@ export default async function ProductDetailsPage(props: { params: Promise<{ prod
               <div className="flex flex-col space-y-[10px] md:w-1/2 w-full">
                 <div className="">
                   <Button
-                    className="flex-1 py-[22px] w-full rounded-[8px] bg-[#457DFF] border-2 border-[#457DFF] text-white hover:bg-[#6996ff] hover:text-white text-[16px]"
+                    className="flex-1 py-[22px] w-full rounded-[8px] bg-primary border-2 border-primary text-white hover:bg-primary_hover hover:text-white text-[16px]"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

@@ -1,0 +1,51 @@
+{
+    
+    "ColorsPalet":{
+
+        "colorPrimary": "#457DFF",
+        "colorPrimaryHover": "#457DFFBD",
+        "colorSecondary": "#AAAAAA",
+        "colorSecondaryHover": "#BBBBBB",
+        
+
+        "colorDashMenuLight": "#457DFF2E",
+
+        "colorRating": "#42A2A2",
+        "colorRatingLight": "#C3E9EB",
+
+        "colorcategory_name": "#000000",
+        "colorPrEngName": "#676767",
+        "colorPrBuy3Bg": "#27AC53",
+        "colorPrComboText": "#FFED75",
+        "colorPrComboBg": "#0000004D",
+        "colorPrSectionBg": "#F6F8F8",
+
+        "colorGrayText": "#636363",
+        "colorHr": "#EBEBEB",
+
+        "colorCodText": "#242424",
+        "colorCodBg": "#BEBFC6",
+
+        "colorFooterBg": "#252A37",
+        "colorFooterBtn": "#32C162",
+        "colorFooterLight": "#2F3441",
+        "colorFooterBtnHover": "#5EFF93",
+
+        "colorMarqueeBg": "#FFBE3C",
+        "colorMarqueeBorder": "#F9B937",
+        "colorMarqueeBgLight": "#FFBB32",
+
+        "colorOfferText": "#25AB20",
+        "colorFreeDeliveryText": "#007F22",
+        "colorFreeDeliveryBg": "#D1F5DB",
+  
+        "colorCoupon": "#EFF3FF",
+        "colorCouponText": "#457DFF",
+
+        "colorError": "#FF3333",
+        "colorErrorHover": "#C70000B2",
+        "colorSuccess": "#00CC00",
+
+        "colorBorder": "#EBEBEB"
+    }
+}

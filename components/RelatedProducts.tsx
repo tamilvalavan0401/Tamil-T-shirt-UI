@@ -128,15 +128,15 @@ export default function RelatedProducts({ allProducts, currentCategory, currentP
                 <CardContent className="p-4 text-left">
                   <div className="flex justify-between items-start mb-1">
                     <div className="truncate">
-                      <h3 className="text-[14px] font-semibold text-[#292D35] truncate">
+                      <h3 className="text-[14px] font-semibold text-category_name truncate">
                         {product.eng_name}
                       </h3>
 
-                      <h3 className="text-[14px] font-semibold text-[#4E5664] truncate">
+                      <h3 className="text-[14px] font-semibold text-pr_eng_name truncate">
                          {product.name}
                       </h3>
                     </div>
-                    <Button variant="ghost" size="icon" className="h-6 w-6 text-gray_text hover:text-red-500">
+                    <Button variant="ghost" size="icon" className="h-6 w-6 text-gray_text hover:text-error">
                       {/* <Heart className="h-4 w-4" />
                       <span className="sr-only">Add to wishlist</span> */}
                       <Heart product={product} />
@@ -146,7 +146,7 @@ export default function RelatedProducts({ allProducts, currentCategory, currentP
                     <div className="space-x-[6px]">
                         <span className="text-[16px] font-bold text-black">₹{product.selling_price}</span>
                         <span className="text-[14px] text-[#737E93] line-through">₹{product.mrp}</span>
-                        <span className="text-[14px] font-medium text-[#008C2D]">{product.discount}OFF</span>
+                        <span className="text-[14px] font-medium text-offer_text">{product.discount}OFF</span>
                     </div>
                   </div>
                 </CardContent>

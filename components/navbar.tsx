@@ -81,9 +81,9 @@ export function Navbar() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm hover:border-white">
       {/* Desktop Navbar (visible on md and larger screens) */}
-      <div className="max-w-7xl mx-auto h-16 items-center justify-between px-4 md:px-6 hidden md:flex desktopnav">
+      <div className="max-w-7xl mx-auto h-16 items-center justify-between px-4 md:px-6 hidden md:flex desktopnav hover:border-white">
 
         <div className="flex items-center">
         {/* Left: Logo */}
@@ -92,7 +92,7 @@ export function Navbar() {
         </Link>
 
         {/* Center: Desktop Navigation */}
-        <nav className="flex items-center">
+        <nav className="flex items-center hover:bg-white hover:border-white">
           {navItems.map((item) => (
             <React.Fragment key={item.name}>
               {item.dropdown ? (
@@ -104,15 +104,15 @@ export function Navbar() {
                     }
                   }}
                 >
-                  <DropdownMenuTrigger asChild>
+                  <DropdownMenuTrigger asChild className=" bg-white hover:bg-white hover:border-white">
                     <Button
                       // variant="ghost"
-                      className="group text-[12px] font-medium transition-colors w-fit  md:!px-2 !px-1"
+                      className="group text-[12px] font-medium transition-colors w-fit  bg-white hover:bg-white hover:border-white md:!px-2 !px-1"
                       onMouseEnter={() => handleMouseEnter(item.name)}
                       onMouseLeave={handleMouseLeave}
                     >
                       {item.name}
-                      <ChevronDown className=" h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      <ChevronDown className=" h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180 hover:bg-none" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent

@@ -91,7 +91,7 @@ export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
     const fetchProducts = async () => {
       try {
         console.log("Fetching products from /products.json")
-        const res = await fetch("/products.json", { cache: "no-store" })
+        const res = await fetch("https://assetsvilva.blr1.cdn.digitaloceanspaces.com/ecomsaas/redisapi/hq2Tam171123/products.json", { cache: "no-store" })
         if (!res.ok) {
           throw new Error(`Failed to fetch products data: ${res.status} ${res.statusText}`)
         }

@@ -39,9 +39,9 @@ export default function CartItemCard({ item }: CartItemCardProps) {
           />
         </div>
       <div className="grid gap-1 flex-1 min-w-0 ">
-        <h3 className="font-semibold truncate text-pr_name">{item.name}</h3>
+        <h3 className="font-semibold truncate text-category_name">{item.name}</h3>
         <div className="flex items-baseline gap-2">
-          <span className="text-lg font-bold text-pr_name ">₹{item.sp}</span>
+          <span className="text-lg font-bold text-category_name ">₹{item.sp}</span>
           {item.mrp > item.sp && (
             <>
               <span className="text-sm text-muted-foreground text-gray_text line-through">₹{item.mrp}</span>

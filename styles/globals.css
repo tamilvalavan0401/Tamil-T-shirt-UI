@@ -115,3 +115,33 @@ body {
 
 }
 } */
+
+
+
+
+
+@keyframes crossSlide {
+  0% {
+    transform: translateX(-60px);
+  }
+  100% {
+    transform: translateX(150vw);
+  }
+}
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.cross-slide {
+  animation: crossSlide 1.5s linear;
+}
+
+.flash {
+  animation: flash 2s ease-in-out;
+}

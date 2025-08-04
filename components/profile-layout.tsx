@@ -65,7 +65,7 @@ export function ProfileLayout({ children, activeSection, onSectionChange }: Prof
         <div className="absolute bottom-6 left-3 right-3 sm:left-6 sm:right-6">
           <button
             onClick={() => router.push("/")}
-            className="w-full flex items-center gap-3 px-3 py-3 text-red-600 hover:bg-red-50 rounded-lg transition-colors sm:justify-start justify-center"
+            className="w-full flex items-center gap-3 px-3 py-3 text-error hover:bg-red-50 rounded-lg transition-colors sm:justify-start justify-center"
             title="Log out" // Tooltip for mobile users
           >
             <LogOut className="w-5 h-5 flex-shrink-0" />
@@ -83,7 +83,7 @@ export function ProfileLayout({ children, activeSection, onSectionChange }: Prof
           <div className="flex items-center gap-4">
             <Button variant="ghost" size="icon" className="relative">
               <Bell className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-error rounded-full"></span>
             </Button>
 
             <DropdownMenu>

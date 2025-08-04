@@ -42,7 +42,7 @@ export default function WishlistPage() {
     return (
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] p-4">
         <h1 className="text-2xl font-bold mb-2">Your Wishlist is Empty</h1>
-        <Link href="/" className="text-blue-500 underline">
+        <Link href="/" className="text-primary underline">
           Continue Shopping
         </Link>
       </div>
@@ -85,17 +85,17 @@ export default function WishlistPage() {
                       <CardContent className="md:p-4 p-2 text-left">
                         <div className="flex justify-between items-start mb-1">
                           <div className="truncate">
-                            <h3 className="text-[14px] font-semibold text-[#292D35] truncate">
-                              {product.eng_name}
+                            <h3 className="text-[14px] font-semibold text-category_name truncate">
+                              {product.category}
                             </h3>
-                            <h3 className="text-[14px] font-semibold text-[#4E5664] truncate">
+                            <h3 className="text-[14px] font-semibold text-pr_eng_name truncate">
                               {product.name}
                             </h3>
                           </div>
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="h-6 w-6 text-gray_text hover:text-red-500"
+                            className="h-6 w-6 text-gray_text hover:text-error"
                             onClick={(e) => {
                               e.preventDefault();
                               toggleRemove(product.id);

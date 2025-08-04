@@ -38,8 +38,8 @@ export default function SortDropdown({ sortBy, onSortChange }: SortDropdownProps
         />
       )}
       <DropdownMenu open={open} onOpenChange={setOpen}>
-        <DropdownMenuTrigger asChild className="">
-          <Button variant="outline" className="flex text-[#666875] items-center  gap-2 bg-transparent">
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" className="flex text-[#666875] items-center gap-2 bg-transparent">
             Sort by : <span className="text-black">{currentSortLabel}</span>
             <ChevronDown className="w-4 h-4" />
           </Button>

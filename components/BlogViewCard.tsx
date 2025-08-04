@@ -23,7 +23,7 @@ const BlogViewCard: React.FC<BlogViewCardProps> = ({
           alt={title}
           className="w-full h-48 object-cover"
         />
-        <span className="absolute top-2 left-2 bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded">
+        <span className="absolute top-2 left-2 bg-primary text-white text-xs font-semibold px-2 py-1 rounded">
           {category}
         </span>
       </div>

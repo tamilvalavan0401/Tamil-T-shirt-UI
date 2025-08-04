@@ -250,7 +250,7 @@ export default function RatingBox({ product, onSubmitRating }: RatingBoxProps) {
                   <p className="text-gray-600 text-sm">Attach your files here (max 10)</p>
                 </label>
 
-                {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+                {error && <p className="text-error text-sm mt-2">{error}</p>}
 
                 <div className="w-full mt-4">
                   <button

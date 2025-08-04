@@ -19,11 +19,13 @@ import { PopularCategoriesSection } from "./home-components/popular-categories-s
 import EnhancedVideoReelSlider from "./home-components/Mobilevideoreelslider";
 import { LovedBySection } from "./home-components/loved-by-section";
 import OurBlogSwiper from "./home-components/our-blog-swiper";
+import CatageryHomeSwiper from "./CatageryHomeSwiper";
 
 // Define the Product interface
 interface Product {
   id: number;
   name: string;
+  category: string;
   eng_name: string;
   descp: string;
   sp: number;
@@ -109,6 +111,11 @@ export default function MainHomePage({
   return (
     
     <main className="min-h-screen">
+
+      <div className="md:hidden block">
+        <CatageryHomeSwiper />
+      </div>
+
       {/* Main Banner Section */}
       <section className="relative w-full overflow-hidden !bg-transparent ">
         <Swiper
@@ -156,6 +163,7 @@ export default function MainHomePage({
           <div className="main-banner-pagination absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10" />
         </Swiper>
       </section>
+      
 
       {/* <div className="!w-full !h-[400px]">
       <Swiper
@@ -244,26 +252,26 @@ export default function MainHomePage({
                         <div className="flex justify-between items-start mb-1">
                           <div className="flex flex-col">
                             <div className="truncate">
-                              <h3 className="w-full truncate whitespace-nowrap overflow-hidden text-base text-pr_name">
-                                {product.name}
+                              <h3 className="w-full truncate whitespace-nowrap overflow-hidden text-base text-category_name">
+                                 {product.category_name}
                               </h3>
                             </div>
                             <div className="w-[90%] truncate">
                               <p className="w-full truncate whitespace-nowrap overflow-hidden text-xs text-pr_eng_name">
-                                {product.eng_name}
+                                {product.name}
                               </p>
                             </div>
                           </div>
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="h-6 !z-50 w-6 text-gray_text hover:text-red-500"
+                            className="h-6 !z-50 w-6 text-gray_text hover:text-error"
                           >
                             <Heart product={product} />
                           </Button>
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className="text-lg font-bold text-pr_name">₹{product.sp}</span>
+                          <span className="text-lg font-bold text-category_name">₹{product.sp}</span>
                           <span className="text-sm text-gray_text line-through">₹{product.mrp}</span>
                           <span className="text-xs font-medium text-offer_text">
                             {Math.round(((product.mrp - product.sp) / product.mrp) * 100)}% Off
@@ -345,26 +353,26 @@ export default function MainHomePage({
                     <div className="flex justify-between items-start mb-1">
                       <div className="!w-[90%]">
                         <div className="w-[90%]">
-                          <h3 className="w-full truncate whitespace-nowrap overflow-hidden text-base text-pr_name">
-                            {product.name}
+                          <h3 className="w-full truncate whitespace-nowrap overflow-hidden text-base text-category_name">
+                            {product.category_name}
                           </h3>
                         </div>
                         <div className="w-[90%]">
                           <p className="w-full truncate whitespace-nowrap overflow-hidden text-xs text-pr_eng_name">
-                            {product.eng_name}
+                            {product.name}
                           </p>
                         </div>
                       </div>
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="h-6 !z-50 w-6 text-gray_text hover:text-red-500"
+                        className="h-6 !z-50 w-6 text-gray_text hover:text-error"
                       >
                         <Heart product={product} />
                       </Button>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-lg font-bold text-pr_name">₹{product.sp}</span>
+                      <span className="text-lg font-bold text-category_name">₹{product.sp}</span>
                       <span className="text-sm text-gray_text line-through">₹{product.mrp}</span>
                       <span className="text-xs font-medium text-offer_text">
                         {Math.round(((product.mrp - product.sp) / product.mrp) * 100)}% Off
@@ -438,26 +446,26 @@ export default function MainHomePage({
                         <div className="flex justify-between items-start mb-1">
                           <div className="!w-[90%]">
                             <div className="w-[90%]">
-                              <h3 className="w-full truncate whitespace-nowrap overflow-hidden text-base text-pr_name">
-                                {product.name}
+                              <h3 className="w-full truncate whitespace-nowrap overflow-hidden text-base text-category_name">
+                                {product.category_name}
                               </h3>
                             </div>
                             <div className="w-[90%]">
                               <p className="w-full truncate whitespace-nowrap overflow-hidden text-xs text-pr_eng_name">
-                                {product.eng_name}
+                                {product.name}
                               </p>
                             </div>
                           </div>
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="h-6 !z-50 w-6 text-gray_text hover:text-red-500"
+                            className="h-6 !z-50 w-6 text-gray_text hover:text-error"
                           >
                             <Heart product={product} />
                           </Button>
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className="text-lg font-bold text-pr_name">₹{product.sp}</span>
+                          <span className="text-lg font-bold text-category_name">₹{product.sp}</span>
                           <span className="text-sm text-gray_text line-through">₹{product.mrp}</span>
                           <span className="text-xs font-medium text-offer_text">
                             {Math.round(((product.mrp - product.sp) / product.mrp) * 100)}% Off
@@ -553,26 +561,26 @@ export default function MainHomePage({
                         <div className="flex justify-between items-start mb-1">
                           <div className="flex flex-col">
                             <div className="truncate">
-                              <h3 className="w-full truncate whitespace-nowrap overflow-hidden text-base text-pr_name">
-                                {product.name}
+                              <h3 className="w-full truncate whitespace-nowrap overflow-hidden text-base text-category_name">
+                                 {product.category_name}
                               </h3>
                             </div>
                             <div className="w-[90%] truncate">
                               <p className="w-full truncate whitespace-nowrap overflow-hidden text-xs text-pr_eng_name">
-                                {product.eng_name}
+                                {product.name}
                               </p>
                             </div>
                           </div>
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="h-6 !z-50 w-6 text-gray_text hover:text-red-500"
+                            className="h-6 !z-50 w-6 text-gray_text hover:text-error"
                           >
                             <Heart product={product} />
                           </Button>
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className="text-lg font-bold text-pr_name">₹{product.sp}</span>
+                          <span className="text-lg font-bold text-category_name">₹{product.sp}</span>
                           <span className="text-sm text-gray_text line-through">₹{product.mrp}</span>
                           <span className="text-xs font-medium text-offer_text">
                             {Math.round(((product.mrp - product.sp) / product.mrp) * 100)}% Off

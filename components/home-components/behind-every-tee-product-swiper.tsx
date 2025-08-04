@@ -100,10 +100,10 @@ export function BehindEveryTeeProductSwiper() {
                   <h3 className="text-lg font-semibold mb-1">{product.name}</h3>
                   <p className="text-sm text-gray_text mb-2">{product.description}</p>
                   <div className="flex items-center justify-center gap-2 mb-2">
-                    <span className="text-xl font-bold text-green-600">{product.price}</span>
+                    <span className="text-xl font-bold text-black">{product.price}</span>
                     <span className="text-sm text-gray_text line-through">{product.originalPrice}</span>
                   </div>
-                  <span className="text-xs font-medium text-red-500">{product.discount}</span>
+                  <span className="text-xs font-medium text-offer_text">{product.discount}</span>
                 </CardContent>
               </Card>
             </SwiperSlide>

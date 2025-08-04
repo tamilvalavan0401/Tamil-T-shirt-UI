@@ -84,7 +84,7 @@ export function StyleComboSwiper({ products }: StyleComboSwiperProps) {
                       
                       <div className="flex flex-col ">
                       <div className="truncate">
-                        <h3 className="w-full truncate whitespace-nowrap overflow-hidden text-base text-pr_name ">
+                        <h3 className="w-full truncate whitespace-nowrap overflow-hidden text-base text-category_name ">
                           {product.name}
                         </h3>
                       </div>
@@ -95,12 +95,12 @@ export function StyleComboSwiper({ products }: StyleComboSwiperProps) {
                       </div>
                       
                       
-                    <Button variant="ghost" size="icon" className="h-6 !z-50 w-6 text-gray_text hover:text-red-500">
+                    <Button variant="ghost" size="icon" className="h-6 !z-50 w-6 text-gray_text hover:text-error">
                       <Heart product={product} />
                     </Button>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-lg font-bold text-pr_name">₹{product.sp}</span>
+                    <span className="text-lg font-bold text-category_name">₹{product.sp}</span>
                     <span className="text-sm text-gray_text line-through">₹{product.mrp}</span>
                     <span className="text-xs font-medium text-offer_text">
                       {Math.round(((product.mrp - product.sp) / product.mrp) * 100)}% Off

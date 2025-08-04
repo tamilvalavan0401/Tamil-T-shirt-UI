@@ -14,6 +14,7 @@ import MobileSortSheet from "@/components/mobile-sort-sheet"
 import BottomMobileBar from "@/components/bottom-mobile-bar"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import FlashOffer from "@/components/FlashOffer"
 // import productsData from "../products.json" // Direct import
 
 // --- Types moved from lib/data.ts ---
@@ -130,7 +131,7 @@ export default function ProductListingPage() {
   /* --------------- load data and process filters -------------- */
   useEffect(() => {
     async function load() {
-      const res = await fetch("/products.json")
+      const res = await fetch("https://assetsvilva.blr1.cdn.digitaloceanspaces.com/ecomsaas/redisapi/hq2Tam171123/products.json")
       const products: Product[] = await res.json()
       setAllProducts(products)
 
@@ -323,9 +324,8 @@ export default function ProductListingPage() {
     <>
     <Navbar/>
     <div className="min-h-screen flex flex-col ">
-      <div className="bg-primary text-white text-center py-2 text-sm font-medium">
-        <p>FREE SHIPPING on all orders above ₹399</p>
-      </div>
+     
+      <FlashOffer/>
       
         <div className="max-w-[90rem] mx-auto">
             <nav className="bg-white px-4 py-3 text-sm text-gray_text flex items-center ">
@@ -351,7 +351,7 @@ export default function ProductListingPage() {
               <main className="flex-1 p-4 md:p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-[22px] text-[#363735] font-bold">
-                    Clothes for Men <span className="text-[#676767] text-[14px]">({productCount} Products)</span>
+                    Clothes for Men <span className="text-gray_text text-[14px]">({productCount} Products)</span>
                   </h2>
                   <div className="hidden md:block">
                     <SortDropdown sortBy={sortBy} onSortChange={setSortBy} />
@@ -388,12 +388,14 @@ export default function ProductListingPage() {
               </>
             )} 
 
-            <BottomMobileBar
+
+        </div>
+                        <BottomMobileBar
               onOpenFilterSheet={() => setIsFilterSheetOpen(true)}
               onOpenSortSheet={() => setIsSortSheetOpen(true)}
             />
-        </div>
     </div>
+
     <Footer/>
     </>
   )

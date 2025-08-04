@@ -139,15 +139,15 @@ export function HotPicksSwiper() {
                       <h3 className="text-base font-semibold text-gray_text">{product.name}</h3>
                       <p className="text-xs text-gray_text">{product.description}</p>
                     </div>
-                    <Button variant="ghost" size="icon" className="h-6 w-6 text-gray_text hover:text-red-500">
+                    <Button variant="ghost" size="icon" className="h-6 w-6 text-gray_text hover:text-error">
                       <Heart className="h-4 w-4" />
                       <span className="sr-only">Add to wishlist</span>
                     </Button>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-lg font-bold text-green-600">{product.price}</span>
+                    <span className="text-lg font-bold text-black">{product.price}</span>
                     <span className="text-sm text-gray_text line-through">{product.originalPrice}</span>
-                    <span className="text-xs font-medium text-green-600">{product.discount}</span>
+                    <span className="text-xs font-medium text-offer_text">{product.discount}</span>
                   </div>
                 </CardContent>
               </Card>

@@ -17,7 +17,7 @@ const Page = () => {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch("/products.json"); // Ensure products.json is in public/
+        const response = await fetch("https://assetsvilva.blr1.cdn.digitaloceanspaces.com/ecomsaas/redisapi/hq2Tam171123/products.json"); // Ensure products.json is in public/
         const data = await response.json();
 
         if (Array.isArray(data)) {

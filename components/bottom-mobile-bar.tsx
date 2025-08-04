@@ -10,7 +10,8 @@ type BottomMobileBarProps = {
 
 export default function BottomMobileBar({ onOpenFilterSheet, onOpenSortSheet }: BottomMobileBarProps) {
   return (
-    <div className="md:hidden sticky bottom-0 bg-white border-t shadow-lg z-10 flex justify-around py-3">
+    <div>
+    <div className="md:hidden !sticky !bottom-0 bg-white border-t shadow-lg z-10 flex justify-around py-3">
       <Button variant="ghost" className="flex  items-center gap-1 text-gray_text" onClick={onOpenSortSheet}>
         <ArrowUpDown className="w-5 h-5" />
         <span className="text-xs font-medium">Sort</span>
@@ -19,6 +20,7 @@ export default function BottomMobileBar({ onOpenFilterSheet, onOpenSortSheet }: 
         <SlidersHorizontal className="w-5 h-5" />
         <span className="text-xs font-medium">Filter</span>
       </Button>
+    </div>
     </div>
   )
 }

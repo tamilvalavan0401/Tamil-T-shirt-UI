@@ -92,8 +92,9 @@ export default function OurBlogSwiper() {
 
   return (
     <>
+    <div className="bg-pr_section_bg mt-[30px] py-[20px]">
     <div>
-      <h2 className="text-[20px] md:text-[24px] font-bold mb-6 text-center">Our Blog</h2>
+      <h2 className="text-[20px] md:text-[24px] font-bold text-center">Our Blog</h2>
     </div>
       <div className="max-w-7xl mx-auto px-4 py-8 relative">
         {/* Swiper Carousel */}
@@ -195,6 +196,7 @@ export default function OurBlogSwiper() {
             />
           </svg>
         </button>
+      </div>
       </div>
     </>
   );
